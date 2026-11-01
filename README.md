@@ -3,17 +3,17 @@
 Models that estimate battery capacity from voltage readings are often trained at a single temperature, but measuring capacity at a new temperature requires time-consuming discharge testing. We train eight regression models to estimate an unseen battery cell's next-discharge capacity from the voltage relaxation after charging, and investigate how much labelled data from a new temperature (35 °C and 45 °C) a model trained at 25 °C needs.
 
 ## Team
-- Eamon (550667766): Executive Summary, Related Work and Conclusion
-- Saifullah (550687672): Background Motivation, Objective and Problem Statement, Potential for Wider Adoption; project notebook and repository
-- Tristan (540820456): Methodology; full study training scripts and experiment runs
-- Nathan (530820172): Simulation Results and Analysis, results figures
+- Eamon (550667766): literature review and theory on EVs and battery health; Executive Summary, Related Work and Conclusion
+- Tristan (540820456): model training, evaluation and methodology; designed and ran the full experimental training pipeline; Methodology section
+- Saifullah (550687672): Background and Motivation, Objective and Problem Statement, and Potential for Wider Adoption; structuring of the ML results for analysis; main project notebook and GitHub repository
+- Nathan (530820172): simulation results analysis and results figures; Simulation Results and Analysis section
 
 ## Repository contents
-- `ENGG2112_Battery_SoH.ipynb`: the full pipeline, step by step (data loading, cleaning and preprocessing, feature engineering, model training, evaluation, temperature transfer and feature importance).
+- `Main_project_code_battery_SoH.ipynb`: the full pipeline, step by step (data loading, cleaning and preprocessing, feature engineering, model training, evaluation, temperature transfer and feature importance).
 - `data/features.csv`: the extracted feature table (22,239 cycles from 66 cells, one row per cycle).
 - `data/feature_names.json`: the 24 model inputs.
 - `Dataset_1_NCA_battery/CY25-1_1-#3.csv`: one raw cell file, used in the notebook to show the raw data and test the feature extraction.
-- `full_study_code/`: the scripts that produced the results in our report.
+- `full_experimental_model_training_code/`: the scripts that produced the results in our report.
 - `requirements.txt`: Python packages.
 
 ### Why a notebook and separate scripts
@@ -26,7 +26,7 @@ The full raw dataset (`Dataset_1_NCA_battery.zip`, about 580 MB) is too large fo
 
 ## How to run
 1. Install: `pip install -r requirements.txt`
-2. Open `ENGG2112_Battery_SoH.ipynb` and run all cells from the top.
+2. Open `Main_project_code_battery_SoH.ipynb` and run all cells from the top.
 
 ## Results
 Mean absolute error (MAE) on 35 unseen 25 °C cells (report Table 4):
