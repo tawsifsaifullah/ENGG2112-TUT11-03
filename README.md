@@ -1,4 +1,4 @@
-# ENGG2112-TUT11-02: Investigating if machine learning models can predict EV battery state of health and observing the adaptability of the models in different temperature extremes
+# ENGG2112-TUT11-03: Investigating if machine learning models can predict EV battery state of health and observing the adaptability of the models in different temperature extremes
 
 Models that estimate battery capacity from voltage readings are often trained at a single temperature, but measuring capacity at a new temperature requires time-consuming discharge testing. We train eight regression models to estimate an unseen battery cell's next-discharge capacity from the voltage relaxation after charging, and investigate how much labelled data from a new temperature (35 °C and 45 °C) a model trained at 25 °C needs.
 
