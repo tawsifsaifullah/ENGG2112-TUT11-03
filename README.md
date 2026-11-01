@@ -22,7 +22,7 @@ The results in the report come from the full study scripts, which run 32 trainin
 ## Dataset
 Zhu et al. (2022), "Data-Driven Capacity Estimation of Commercial Lithium-Ion Batteries from Voltage Relaxation", Nature Communications 13, 2261. Dataset 1 (NCA) from Zenodo record 6405084: https://zenodo.org/records/6405084
 
-The full raw dataset (`Dataset_1_NCA_battery.zip`, about 580 MB) is too large for GitHub. The notebook runs from `data/features.csv`. To rebuild the features from the raw data, download and unzip the dataset into `Dataset_1_NCA_battery/` and set `REBUILD_FEATURES = True` in the notebook.
+We ran our feature extraction over all 66 raw cell files in Dataset 1 to produce `data/features.csv`, so every result in the notebook and report uses all 66 cells. The full raw dataset (`Dataset_1_NCA_battery.zip`, about 580 MB) is too large for GitHub, so the repository only includes the extracted feature table and one raw file (`CY25-1_1-#3.csv`). That raw file is used in the notebook to show what the raw data looks like and to check that our extraction code reproduces the matching rows of `data/features.csv`. To rebuild the features from the raw data, download and unzip the dataset into `Dataset_1_NCA_battery/` and set `REBUILD_FEATURES = True` in the notebook.
 
 ## How to run
 1. Install: `pip install -r requirements.txt`
