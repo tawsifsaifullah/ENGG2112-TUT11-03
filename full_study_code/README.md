@@ -1,4 +1,4 @@
-# Full study code
+# Full experimental model training code
 
 These scripts produced the results in our report (32 training jobs, run on CPU on 23 October 2026).
 
@@ -9,6 +9,6 @@ These scripts produced the results in our report (32 training jobs, run on CPU o
 - `summarise.py`: combines the results into comparison tables and figures
 - `explain.py`: SHAP analysis of the source-only models
 - `preflight.py`, `test_integrity.py`: checks on the data and code before running
-- `requirements.txt`: packages used for the full study (includes PyTorch)
+- `requirements.txt`: packages used for the full study; the MLPs also need PyTorch (version 2.9.1 was used)
 
-The full run takes several hours of CPU time. For a shorter, step-by-step version of the same pipeline, see `ENGG2112_Battery_SoH.ipynb` in the main folder.
+The full run takes several hours of CPU time. For a shorter, step-by-step version of the same pipeline, see `Main_project_code_battery_SoH.ipynb` in the main folder.
